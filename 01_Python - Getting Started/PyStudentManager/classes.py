@@ -30,7 +30,7 @@ class HighSchoolStudent(Student):
 
     def get_name_capitalize(self):
         original_value = super().get_name_capitalize()
-        return original_value + "-HS"
+        return original_value + " - HS"
 
 
 james = HighSchoolStudent("james")
