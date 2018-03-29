@@ -5,9 +5,10 @@ class Student:
 
     school_name = "Springfield Elementary"
 
-    def __init__(self, name, student_id=332):
+    def __init__(self, name, last_name, student_id=332):
         self.name = name
         self.student_id = student_id
+        self.last_name = last_name
         students.append(self)
 
     def __str__(self):
