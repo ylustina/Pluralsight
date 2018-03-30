@@ -19,5 +19,31 @@ def plot_data(pl, X, y):
     return pl
 
 
+# Common function that draws the decision boundaries
+def plot_decision_boundary(model, X, y):
+
+    amin, bmin = X.min(axis=0) - 0.1
+    amax, bmax = X.max(axis=0) + 0.1
+    hticks = np.linspace(amin, amax, 101)
+    vticks = np.linspace(bmin, bmax, 101)
+
+    aa, bb = np.meshgrid(hticks, vticks)
+    ab = np.c_[aa.ravel(), bb.ravel()]
+
+    # make prediction with the model and reshape the output so contourf can plot it
+    c = model.predict(ab)
+    Z = c.reshape(aa.shape)
+
+    plt.figure(figsize=(12, 8))
+
+    # plot the contour
+    plt.contourf(aa, bb, Z, cmap='bwr', alpha=0.2)
+
+    # plot the moons of data
+    plot_data(plt, X, y)
+
+    return plt
+
+
 
 
