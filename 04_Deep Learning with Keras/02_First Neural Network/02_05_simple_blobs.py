@@ -1,4 +1,3 @@
-
 import os
 import numpy as np
 import matplotlib.pyplot as plt
@@ -36,7 +35,8 @@ def plot_decision_boundary(model, X, y):
 
     plt.figure(figsize=(12, 8))
 
-    # plot the contour
+    # plot the contour rather than just the line
+    # allows us to see the confidence of the prediction
     plt.contourf(aa, bb, Z, cmap='bwr', alpha=0.2)
 
     # plot the moons of data
@@ -45,5 +45,11 @@ def plot_decision_boundary(model, X, y):
     return plt
 
 
+# Generate some data blobs.
+# Data will be either 0 or 1 when 2 is number of centers.
+# More in Jupyter notebook
+X, y = make_blobs(n_samples=1000, centers=2, random_state=42)
 
+pl = plot_data(plt, X, y)
+pl.show()
 
