@@ -78,7 +78,7 @@ model.fit(X_train, y_train, epochs=100, verbose=1)
 
 # Get loss and accuracy, print
 eval_result = model.evaluate(X_test, y_test)
-print("\n\nTest loss:", eval_result[0], "Test accuracy:", eval_result[1])
+print("\n\nTest loss:", eval_result[0], "\nTest accuracy:", eval_result[1])
 
 # Plot the decision boundary
 plot_decision_boundary(model, X, y).show()
