@@ -1,7 +1,14 @@
 import os
+
 import numpy as np
 import matplotlib.pyplot as plt
+
 from sklearn.datasets import make_blobs
+from sklearn.model_selection import train_test_split
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.optimizers import Adam
+
 
 os.environ['TF_CPP_MIN_LOG_LEVEL']='2'
 
@@ -55,9 +62,11 @@ pl.show()
 
 
 # Split the data into Training and Test sets
-from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 
+# Create the keras model
+# Simple Sequential model
+model = Sequential()
 
-
+model.add(Dense(1, input_shape=(2,), activation="sigmoid"))
 
