@@ -8,12 +8,13 @@ from sklearn.model_selection import train_test_split
 from keras.models import Sequential
 from keras.layers import Dense
 from keras.optimizers import Adam
+from keras.utils import plot_model
+from keras.callbacks import EarlyStopping
 
 os.environ['TF_CPP_MIN_LOG_LEVEL']='2'
 
 
 # Helper functions
-
 def plot_data(pl, X, y):
 
     pl.plot(X[y==0, 0], X[y==0, 1], 'ob', alpha=0.5)
@@ -56,30 +57,35 @@ pl.show()
 
 
 # Training and Testing Sets
-
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 
 
 # Implementing Layers and Neurons
-
 model = Sequential()
 
-model.add(Dense(4, input_shape=(2, ), activation='tanh'))
-model.add(Dense(4, activation='tanh'))
+model.add(Dense(4, input_shape=(2, ), activation='tanh', name='Hidden-1'))
+model.add(Dense(4, activation='tanh', name='Hidden-2'))
+model.add(Dense(1, activation='sigmoid', name='output_layer'))
 
-model.add(Dense(1, activation='sigmoid'))
+model.summary()
 
 model.compile(Adam(lr=0.05), 'binary_crossentropy', metrics=['accuracy'])
 
-model.fit(X_train, y_train, epochs=100, verbose=1)
+
+# Plot model isn't working
+# plot_model(model, to_file='model.png', show_shapes=True, show_layer_names=True)
+
+
+# Defining early stopping callback
+early_callback = [EarlyStopping(monitor='val_acc', patience=5, mode='max')]
+
+model.fit(X_train, y_train, epochs=100, verbose=1, callbacks=early_callback, validation_data=(X_test, y_test))
 
 
 # Loss and Accuracy
-
 eval_result = model.evaluate(X_test, y_test)
 print("\n\nTest Loss: ", eval_result[0], "\nTest Accuracy: ", eval_result[1])
 
 
 # Plotting the Decision Boundary
-
 plot_decision_boundary(model, X, y).show()
