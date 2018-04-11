@@ -69,10 +69,11 @@ model.add(Dense(1, activation='sigmoid', name='output_layer'))
 
 model.summary()
 
+
 model.compile(Adam(lr=0.05), 'binary_crossentropy', metrics=['accuracy'])
 
 
-# Plot model isn't working
+# Plot model isn't working :(
 # plot_model(model, to_file='model.png', show_shapes=True, show_layer_names=True)
 
 
