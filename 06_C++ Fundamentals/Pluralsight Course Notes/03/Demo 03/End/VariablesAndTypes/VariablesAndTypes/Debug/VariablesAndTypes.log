@@ -1,0 +1,30 @@
+﻿Build started 16/08/2011 9:38:38 PM.
+     1>Project "D:\working\pluralsight\modern C++\2a - Variables\Demo\End\VariablesAndTypes\VariablesAndTypes\VariablesAndTypes.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\VariablesAndTypes.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         All outputs are up-to-date.
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\VariablesAndTypes.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt VariablesAndTypes.cpp
+         VariablesAndTypes.cpp
+     1>d:\working\pluralsight\modern c++\2a - variables\demo\end\variablesandtypes\variablesandtypes\variablesandtypes.cpp(31): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+     1>d:\working\pluralsight\modern c++\2a - variables\demo\end\variablesandtypes\variablesandtypes\variablesandtypes.cpp(33): warning C4800: 'double' : forcing value to bool 'true' or 'false' (performance warning)
+       ManifestResourceCompile:
+         All outputs are up-to-date.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\working\pluralsight\modern C++\2a - Variables\Demo\End\VariablesAndTypes\Debug\VariablesAndTypes.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\VariablesAndTypes.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\working\pluralsight\modern C++\2a - Variables\Demo\End\VariablesAndTypes\Debug\VariablesAndTypes.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\working\pluralsight\modern C++\2a - Variables\Demo\End\VariablesAndTypes\Debug\VariablesAndTypes.lib" /MACHINE:X86 Debug\VariablesAndTypes.exe.embed.manifest.res
+         Debug\stdafx.obj
+         Debug\VariablesAndTypes.obj
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\VariablesAndTypes.exe.embed.manifest" /manifest Debug\VariablesAndTypes.exe.intermediate.manifest
+         All outputs are up-to-date.
+       LinkEmbedManifest:
+         All outputs are up-to-date.
+         VariablesAndTypes.vcxproj -> D:\working\pluralsight\modern C++\2a - Variables\Demo\End\VariablesAndTypes\Debug\VariablesAndTypes.exe
+       FinalizeBuildStatus:
+         Deleting file "Debug\VariablesAndTypes.unsuccessfulbuild".
+         Touching "Debug\VariablesAndTypes.lastbuildstate".
+     1>Done Building Project "D:\working\pluralsight\modern C++\2a - Variables\Demo\End\VariablesAndTypes\VariablesAndTypes\VariablesAndTypes.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.81
